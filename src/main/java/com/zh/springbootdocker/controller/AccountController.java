@@ -25,7 +25,7 @@ public class AccountController {
         if (account == null) {
             return CommonResult.fail(HttpStatus.NOT_FOUND);
         }
-        return CommonResult.success("success");
+        return CommonResult.success(account);
     }
 
 }
