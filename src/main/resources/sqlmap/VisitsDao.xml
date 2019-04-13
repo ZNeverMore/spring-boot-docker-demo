@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zh.springbootdocker.dao.VisitsDao">
+
+    <select id="findVisitsByAddr" parameterType="map" resultType="integer">
+        SELECT
+        times
+        FROM visits
+        WHERE addr = #{addr}
+    </select>
+
+    <update id="updateVisitsByAddr" parameterType="map">
+        UPDATE visits
+        SET times = times + 1
+        WHERE addr = #{addr}
+    </update>
+
+    <insert id="insertRecord">
+        INSERT INTO
+        visits
+            (times, addr)
+        VALUES
+            (#{times}, #{addr})
+    </insert>
+
+
+</mapper>
