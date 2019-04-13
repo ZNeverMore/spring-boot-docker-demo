@@ -3,10 +3,13 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://39.96.165.167:3306/zhangqiang?useSSL=false
-    username: zhangqiang
-    password: As%277708272
+#    url: jdbc:mysql://39.96.165.167:3306/zhangqiang?useSSL=false
+ #   username: zhangqiang
+  #  password: As%277708272
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.106.38.77:3306/yaouguoji?useSSL=false
+    username: yaouguoji
+    password: liuwen
 mybatis:
   type-aliases-package: com.zh.springbootdocker.entity
   mapper-locations: classpath:sqlmap/*.xml
