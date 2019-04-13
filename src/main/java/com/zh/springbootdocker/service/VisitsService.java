@@ -9,7 +9,7 @@ public interface VisitsService {
 
     Integer findVisitsByAddr(String addr);
 
-    int updateVisitsByAddr(String addr);
+    int updateVisitsByAddr(String addr, Integer times);
 
     void insertRecord(Integer times, String addr);
 

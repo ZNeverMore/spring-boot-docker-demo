@@ -26,13 +26,14 @@ public class VisitsController {
     public CommonResult getTimes(HttpServletRequest request) {
         String remoteAddr = request.getRemoteAddr();
         Integer visitsByAddr = visitsService.findVisitsByAddr(remoteAddr);
+        visitsByAddr = ++visitsByAddr;
         Map<String, Integer> map = Maps.newHashMap();
         if (visitsByAddr == null) {
             visitsService.insertRecord(INITIALIZE_VISITS, remoteAddr);
             map.put("visits", INITIALIZE_VISITS);
             return CommonResult.success(map);
         }
-        visitsService.updateVisitsByAddr(remoteAddr);
+        visitsService.updateVisitsByAddr(remoteAddr, visitsByAddr);
         map.put("visits", visitsByAddr);
         return CommonResult.success(map);
     }

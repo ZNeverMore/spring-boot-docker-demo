@@ -11,7 +11,7 @@ public interface VisitsDao {
 
     Integer findVisitsByAddr(String addr);
 
-    Integer updateVisitsByAddr(String addr);
+    Integer updateVisitsByAddr(@Param("addr") String addr, @Param("times") Integer times);
 
     void insertRecord(@Param("times") Integer times, @Param("addr") String addr);
 

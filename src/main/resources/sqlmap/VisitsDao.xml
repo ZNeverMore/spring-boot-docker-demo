@@ -11,7 +11,7 @@
 
     <update id="updateVisitsByAddr" parameterType="map">
         UPDATE visits
-        SET times = times + 1
+        SET times = #{times}
         WHERE addr = #{addr}
     </update>
 

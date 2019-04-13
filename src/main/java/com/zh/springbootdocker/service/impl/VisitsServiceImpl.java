@@ -22,8 +22,8 @@ public class VisitsServiceImpl implements VisitsService {
     }
 
     @Override
-    public int updateVisitsByAddr(String addr) {
-        return visitsDao.updateVisitsByAddr(addr);
+    public int updateVisitsByAddr(String addr, Integer times) {
+        return visitsDao.updateVisitsByAddr(addr, times);
     }
 
     @Override
